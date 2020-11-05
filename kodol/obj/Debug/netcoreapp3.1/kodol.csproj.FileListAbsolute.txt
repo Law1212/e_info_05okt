@@ -1,0 +1,13 @@
+E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\bin\Debug\netcoreapp3.1\kodol.exe
+E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\bin\Debug\netcoreapp3.1\kodol.deps.json
+E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\bin\Debug\netcoreapp3.1\kodol.runtimeconfig.json
+E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\bin\Debug\netcoreapp3.1\kodol.runtimeconfig.dev.json
+E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\bin\Debug\netcoreapp3.1\kodol.dll
+E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\bin\Debug\netcoreapp3.1\kodol.pdb
+E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\obj\Debug\netcoreapp3.1\kodol.csprojAssemblyReference.cache
+E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\obj\Debug\netcoreapp3.1\kodol.AssemblyInfoInputs.cache
+E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\obj\Debug\netcoreapp3.1\kodol.AssemblyInfo.cs
+E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\obj\Debug\netcoreapp3.1\kodol.csproj.CoreCompileInputs.cache
+E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\obj\Debug\netcoreapp3.1\kodol.dll
+E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\obj\Debug\netcoreapp3.1\kodol.pdb
+E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\obj\Debug\netcoreapp3.1\kodol.genruntimeconfig.cache

@@ -11,3 +11,16 @@ E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\obj\Debug\netcoreapp3.
 E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\obj\Debug\netcoreapp3.1\kodol.dll
 E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\obj\Debug\netcoreapp3.1\kodol.pdb
 E:\Desktop\Text\xprogramming - html\2006.prog.emelt\kodol\obj\Debug\netcoreapp3.1\kodol.genruntimeconfig.cache
+C:\Users\Law\Documents\GitHub\e_info_05okt\kodol\obj\Debug\netcoreapp3.1\kodol.csprojAssemblyReference.cache
+C:\Users\Law\Documents\GitHub\e_info_05okt\kodol\obj\Debug\netcoreapp3.1\kodol.AssemblyInfoInputs.cache
+C:\Users\Law\Documents\GitHub\e_info_05okt\kodol\obj\Debug\netcoreapp3.1\kodol.AssemblyInfo.cs
+C:\Users\Law\Documents\GitHub\e_info_05okt\kodol\obj\Debug\netcoreapp3.1\kodol.csproj.CoreCompileInputs.cache
+C:\Users\Law\Documents\GitHub\e_info_05okt\kodol\obj\Debug\netcoreapp3.1\kodol.dll
+C:\Users\Law\Documents\GitHub\e_info_05okt\kodol\obj\Debug\netcoreapp3.1\kodol.pdb
+C:\Users\Law\Documents\GitHub\e_info_05okt\kodol\bin\Debug\netcoreapp3.1\kodol.exe
+C:\Users\Law\Documents\GitHub\e_info_05okt\kodol\bin\Debug\netcoreapp3.1\kodol.deps.json
+C:\Users\Law\Documents\GitHub\e_info_05okt\kodol\bin\Debug\netcoreapp3.1\kodol.runtimeconfig.json
+C:\Users\Law\Documents\GitHub\e_info_05okt\kodol\bin\Debug\netcoreapp3.1\kodol.runtimeconfig.dev.json
+C:\Users\Law\Documents\GitHub\e_info_05okt\kodol\bin\Debug\netcoreapp3.1\kodol.dll
+C:\Users\Law\Documents\GitHub\e_info_05okt\kodol\bin\Debug\netcoreapp3.1\kodol.pdb
+C:\Users\Law\Documents\GitHub\e_info_05okt\kodol\obj\Debug\netcoreapp3.1\kodol.genruntimeconfig.cache

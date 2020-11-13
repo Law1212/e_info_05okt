@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-// Test nyiltszöveg: "ezapróbaszövegamitkódolunk"
+// Test nyiltszöveg: "Ez a próba szöveg, amit kódolunk!"
 // Test titkosszöveg: "auto"
 // Test right result: ETTDRIUOSTHJEATAINDCDIEINE
 

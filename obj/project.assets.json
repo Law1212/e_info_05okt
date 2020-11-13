@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Law\\Documents\\GitHub\\e_info_05okt\\kodol\\kodol.csproj",
+      "projectUniqueName": "C:\\Users\\Law\\Documents\\GitHub\\e_info_05okt\\kodol.csproj",
       "projectName": "kodol",
-      "projectPath": "C:\\Users\\Law\\Documents\\GitHub\\e_info_05okt\\kodol\\kodol.csproj",
+      "projectPath": "C:\\Users\\Law\\Documents\\GitHub\\e_info_05okt\\kodol.csproj",
       "packagesPath": "C:\\Users\\Law\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Law\\Documents\\GitHub\\e_info_05okt\\kodol\\obj\\",
+      "outputPath": "C:\\Users\\Law\\Documents\\GitHub\\e_info_05okt\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Law\\AppData\\Roaming\\NuGet\\NuGet.Config",

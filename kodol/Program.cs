@@ -14,34 +14,35 @@ namespace kodol
     {
         static void Main(string[] args)
         {
-            // 1.Feladat
+            // 1.Task
+
             Console.Write("// 1.Feladat \n");
             Console.WriteLine("Adj meg egy nyilt szöveget: ");
             string openText = Console.ReadLine();
 
-            // 2.Feladat
+            // 2.Task
 
             openText = inEnglish(openText);
 
-            // 3.Feladat
+            // 3.Task
 
             Console.WriteLine("\n// 2. & 3. Feladat");
             Console.WriteLine("Nyílt szöveg: " + openText + "\n");
 
-            // 4. Feladat
+            // 4. Task
 
             Console.Write("// 4.Feladat \n");
             Console.WriteLine("Adjon meg egy 1-5 karakter hosszú szöveget, ami csak az angol abc betüit tartalmazza!");
             string secretText = Console.ReadLine();
             secretText.ToUpper();
 
-            // 5. Feladat
+            // 5. Task
 
             Console.Write("\n// 5.Feladat \n");
             secretText = connectStrings(openText, secretText);
             Console.WriteLine("Secret text: " + secretText + "\n");
 
-            // 6. Feladat
+            // 6. Task
 
             Console.Write("// 6.Feladat \n");
             Console.WriteLine("A titkosított szöveg: " + codeIt(openText ,secretText));

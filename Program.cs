@@ -8,6 +8,8 @@ using System.Text.RegularExpressions;
 // Test titkosszöveg: "auto"
 // Test right result: ETTDRIUOSTHJEATAINDCDIEINE
 
+// Filename: "Vtabla.dat"
+
 namespace kodol
 {
     class Program
@@ -22,7 +24,7 @@ namespace kodol
 
             // 2.Task
 
-            openText = inEnglish(openText);
+            openText = clearUpText(openText);
 
             // 3.Task
 
@@ -39,119 +41,114 @@ namespace kodol
             // 5. Task
 
             Console.Write("\n// 5.Feladat \n");
-            secretText = connectStrings(openText, secretText);
+            secretText = connectTextLengths(openText, secretText);
             Console.WriteLine("Secret text: " + secretText + "\n");
 
             // 6. Task
 
             Console.Write("// 6.Feladat \n");
-            Console.WriteLine("A titkosított szöveg: " + codeIt(openText ,secretText));
+            Console.WriteLine("A titkosított szöveg: " + encryptText(openText, secretText, readSpreadsheet("Vtabla.dat")));
 
         }
-        static string inEnglish(string input)
+        static string clearUpText(string text)
         {
-            string returnString = "";
-            input = input.ToUpper();
+            string textToReturn = "";
+            text = text.ToUpper();
 
-            // Converting the input into a char list
+            // Converting the text into a list of letters
 
-            List<char> charList = input.ToCharArray().ToList();
+            List<char> letters = text.ToCharArray().ToList();
 
             // Checking for hungarian uga buga characters
 
-            for (int i = 0; i < charList.Count; i++)
+            for (int i = 0; i < letters.Count; i++)
             {
-                if(charList[i] == 'Á')
-                    charList[i] = 'A';
-                
-                if (charList[i] == 'É')
-                    charList[i] = 'E';
-                
-                if (charList[i] == 'Í')
-                    charList[i] = 'I';
-                
-                if (charList[i] == 'Ö' || charList[i] == 'Ő' || charList[i] == 'Ó')
-                    charList[i] = 'O';
-                
-                if (charList[i] == 'Ü' || charList[i] == 'Ű' || charList[i] == 'Ú')
-                    charList[i] = 'U';
-                returnString += charList[i];
+                if (letters[i] == 'Á')
+                    letters[i] = 'A';
+
+                if (letters[i] == 'É')
+                    letters[i] = 'E';
+
+                if (letters[i] == 'Í')
+                    letters[i] = 'I';
+
+                if (letters[i] == 'Ö' || letters[i] == 'Ő' || letters[i] == 'Ó')
+                    letters[i] = 'O';
+
+                if (letters[i] == 'Ü' || letters[i] == 'Ű' || letters[i] == 'Ú')
+                    letters[i] = 'U';
+                textToReturn += letters[i];
             }
 
-            // Checking for speical characters
+            // Checking for specical characters like: ';' | ',' | '.'
 
-            returnString = Regex.Replace(returnString, "[^A-Z]", "");
+            textToReturn = Regex.Replace(textToReturn, "[^A-Z]", "");
 
-            return returnString;
+            return textToReturn;
         }
-        static string connectStrings(string OpenText, string SecretText)
+        static string connectTextLengths(string textToLookUpTo, string textToChange)
         {
-            string returnString = "";
+            string textToReturn = "";
 
-            // Lengthing the SecretText
+            // Lengthening the textToChange
 
-            do {
-                SecretText += SecretText;
-            } while (SecretText.Length < OpenText.Length);
-
-            // Making sure that the two strings are the same length
-
-            List<char> SecretTextList = SecretText.ToCharArray().ToList();
-
-            while (SecretTextList.Count != OpenText.Length)
-                SecretTextList.RemoveAt(SecretTextList.Count - 1);
-            
-            // Adding together and returning the reformed string 
-
-            for (int i = 0; i < SecretTextList.Count; i++)
-                returnString += SecretTextList[i];
-
-            return returnString.ToUpper();
-        }
-        static string codeIt(string OpenText ,string SecretText)
-        {
-            // Reading .dat file && creating a Jagged list to hold the values
-
-            StreamReader objInput = new StreamReader("Vtabla.dat", System.Text.Encoding.Default);
-            string contents = objInput.ReadToEnd().Trim();
-            string[] split = System.Text.RegularExpressions.Regex.Split(contents, "\\s+", RegexOptions.None);
-
-            List<List<string>> Vtabla = new List<List<string>>();
-            for (int i = 0; i < split.Length; i++)
+            if (textToLookUpTo.Length != textToChange.Length)
             {
-                List<string> subVtabla = new List<string>();
-                for (int j = 0; j < split[i].Length; j++)
+                do
                 {
-                    subVtabla.Add(split[i].Substring(j, 1));
-                }
-                Vtabla.Add(subVtabla);
+                    textToChange += textToChange;
+                } while (textToChange.Length < textToLookUpTo.Length);
             }
 
-            // Classifing the OpenText
+            // Removing extra letters at the end of the textToChange
 
-            string returnAsClassified = "";
+            List<char> lettersOfTextToChange = textToChange.ToCharArray().ToList();
 
-            for (int i = 0; i < OpenText.Length; i++)
+            while (lettersOfTextToChange.Count != textToLookUpTo.Length)
+                lettersOfTextToChange.RemoveAt(lettersOfTextToChange.Count - 1);
+            
+            // Converting the letters into a complete text
+
+            for (int i = 0; i < lettersOfTextToChange.Count; i++)
+                textToReturn += lettersOfTextToChange[i];
+
+            return textToReturn.ToUpper();
+        }
+        static string[] readSpreadsheet(string fileName)
+        {
+            // Reading the outside file and making it easy to use
+
+            StreamReader objInput = new StreamReader(fileName, System.Text.Encoding.Default);
+            string textContentOfTheFile = objInput.ReadToEnd().Trim();
+            string[] contantByRows = Regex.Split(textContentOfTheFile, "\\s+", RegexOptions.None);
+            return contantByRows;
+        }
+        static string encryptText(string textToBeEncrypted ,string SecretText, string[] tableByRows)
+        {
+            string textEnryptedToReturn = "";
+
+            // Getting the indexes of the specific letters
+
+            for (int i = 0; i < textToBeEncrypted.Length; i++)
             {
                 int columnIndex = 0;
                 int rowIndex = 0;
-                for (int j = 0; j < Vtabla.Count; j++)
+                for (int k = 0; k < tableByRows.Length; k++)
                 {
-                    if (Vtabla[j][0] == OpenText[i].ToString())
-                    {
-                        columnIndex = j;
-                    }
+                    if (tableByRows[k].ElementAt(0) == textToBeEncrypted[i])
+                        columnIndex = k;
                 }
-                for (int k = 0; k < Vtabla[0].Count; k++)
+                for (int k = 0; k < tableByRows[0].Length; k++)
                 {
-                    if(Vtabla[0][k] == SecretText[i].ToString())
-                    {
+                    if(tableByRows[0].ElementAt(k) == SecretText[i])
                         rowIndex = k;
-                    }
                 }
-                returnAsClassified += Vtabla[columnIndex][rowIndex];
+
+                // Adding the coded letter to the text to return
+
+                textEnryptedToReturn += tableByRows[columnIndex][rowIndex];
             }
-            return returnAsClassified;
+            return textEnryptedToReturn;
         }
     }
 }
